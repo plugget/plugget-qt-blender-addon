@@ -1,5 +1,7 @@
 # plugget qt addon
-An add-on wrapper for [plugget qt](https://github.com/plugget/plugget-qt) to add the menu entry `Window/Plugget Qt Manager` 
+An add-on wrapper for [plugget qt](https://github.com/plugget/plugget-qt) to add the menu entry `Window/Plugget Qt Manager`
+
+If you have multiple Blender wrapper add-ons around some simple Python code, I'd suggest to not use add-ons but use a menu manager instead to make your own menu with [unimenu](https://github.com/hannesdelbeke/unimenu_addon).
 
 ![image](https://github.com/plugget/plugget-qt-addon/assets/3758308/f8322473-0071-46d7-86bc-165f42dfd24b)
 
