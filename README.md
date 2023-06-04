@@ -1,7 +1,13 @@
 # plugget qt addon
-An add-on wrapper for [plugget qt](https://github.com/plugget/plugget-qt) to add the menu entry `Window/Plugget Qt Manager`
+A simple add-on to add a [plugget qt](https://github.com/plugget/plugget-qt) launcher to the Blender menu `Window/Plugget Qt Manager` <br>
+There's no actual code in the add-on. It just runs
+```python
+import plugget_search_widget
+plugget_search_widget.show()
+```
 
-If you have multiple Blender wrapper add-ons around some simple Python code, I'd suggest to not use add-ons but use a menu manager instead to make your own menu with [unimenu](https://github.com/hannesdelbeke/unimenu_addon).
+If you already have an add-on or script, to manage your menu and tools, you can skip this add-on and launch the widget with above code.
+(I recommend the menu manager [unimenu](https://github.com/hannesdelbeke/unimenu_addon))
 
 ![image](https://github.com/plugget/plugget-qt-addon/assets/3758308/f8322473-0071-46d7-86bc-165f42dfd24b)
 
