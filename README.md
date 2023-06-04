@@ -1,7 +1,7 @@
 # plugget qt addon
-addon wrapper around [plugget qt](https://github.com/plugget/plugget-qt)
+An add-on wrapper for [plugget qt](https://github.com/plugget/plugget-qt) to add the menu entry `Window/Plugget Qt Manager` 
 
-- adds it to the menu `Window/Plugget` 
+![image](https://github.com/plugget/plugget-qt-addon/assets/3758308/f8322473-0071-46d7-86bc-165f42dfd24b)
 
 ## install
 
