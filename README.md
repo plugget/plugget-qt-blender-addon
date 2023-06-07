@@ -9,7 +9,8 @@ plugget_search_widget.show()
 If you already have an add-on or script, to manage your menu and tools, you can skip this add-on and launch the widget with above code.
 (I recommend the menu manager [unimenu](https://github.com/hannesdelbeke/unimenu_addon))
 
-![image](https://github.com/plugget/plugget-qt-addon/assets/3758308/f8322473-0071-46d7-86bc-165f42dfd24b)
+![image](https://github.com/plugget/plugget-qt-addon/assets/3758308/0752c140-5b26-452e-81ac-fc4e36ccdb23)
+_Dark ui is auto applied in Blender due to the qt stylesheet_
 
 ## install
 
