@@ -30,11 +30,13 @@ TODO
 - Enable the addon, it should now show in your Blender menu `Window/Plugget Qt Manager`
 
 
-If this tool is helpfull, you can ⭐ star it on the github page,
-just click the ⭐ star button in the top-right of this page.
-
 ### requirements
 - [plugget qt](https://github.com/plugget/plugget-qt) ofcourse
   - [plugget](https://github.com/plugget/plugget)
   - [PySide2](https://pypi.org/project/PySide2/)
 - (may i suggest [bqt](https://github.com/techartorg/bqt/))
+
+### support
+- PRs and bugreports are welcome
+- If this tool is helpfull, you can ⭐ star it on the github page,
+just click the ⭐ star button in the top-right of this page.
