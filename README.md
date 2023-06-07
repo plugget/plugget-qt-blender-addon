@@ -28,3 +28,7 @@ TODO
 - Add the `plugget_qt_addon` folder (not `plugget-qt-addon` ⚠️) to your add-ons folder#
 - Ensure you have the dependencies installed.
 - Enable the addon, it should now show in your Blender menu `Window/Plugget Qt Manager`
+
+
+If this tool is helpfull, you can ⭐ star it on the github page,
+just click the ⭐ star button in the top-right of this page.
