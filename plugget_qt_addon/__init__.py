@@ -18,9 +18,9 @@ class OpenPluggetQt(bpy.types.Operator):
     bl_label = "Open Plugget Qt Manager"
 
     def execute(self, context):
-        import plugget_search_widget
+        import plugget_qt
         global widget  # prevent widget from being garbage collected
-        widget = plugget_search_widget.show()
+        widget = plugget_qt.show()
         return {'FINISHED'}
 
 
