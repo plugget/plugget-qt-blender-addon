@@ -1,7 +1,7 @@
 bl_info = {
-    "name": "Plugget Qt Package Manager",
+    "name": "Plugget Qt Package Manager TEST",
     "description": "manage Plugget packages",
-    "author": "Hannes D",
+    "author": "Hannes D TEST",
     "version": (0, 0, 1),
     "blender": (2, 91, 0),
     "location": "Window/Plugget Qt Manager",
