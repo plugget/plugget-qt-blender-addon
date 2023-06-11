@@ -2,8 +2,8 @@
 A simple add-on to add a [plugget qt](https://github.com/plugget/plugget-qt) launcher to the Blender menu `Window/Plugget Qt Manager` <br>
 There's no actual code in the add-on. It just runs
 ```python
-import plugget_search_widget
-plugget_search_widget.show()
+import plugget_qt
+plugget_qt.show()
 ```
 
 If you already have an add-on or script, to manage your menu and tools, you can skip this add-on and launch the widget with above code.
