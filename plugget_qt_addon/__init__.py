@@ -15,7 +15,7 @@ import bpy
 class OpenPluggetQt(bpy.types.Operator):
     """Open the Plugget Qt Manager window"""
     bl_idname = "plugget.show_qt_manager"
-    bl_label = "Open Plugget Qt Manager"
+    bl_label = "Plugget Qt Manager"
 
     def execute(self, context):
         import plugget_qt
