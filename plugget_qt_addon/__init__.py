@@ -16,12 +16,12 @@ class OpenPluggetQt(bpy.types.Operator):
     """Open the Plugget Qt Manager window"""
     bl_idname = "plugget.show_qt_manager"
     bl_label = "Plugget Qt Manager"
+    self.widget = None
 
     def execute(self, context):
         import plugget_qt
-        global widget  # prevent widget from being garbage collected
-        widget = plugget_qt.show()
-        return {'FINISHED'}
+        self.widget = plugget_qt.show()  # store ref to prevent garbage collect
+        return {'RUNNING_MODAL'}  # MODAL keeps operator alive to prevent instant garbage collection
 
 
 def menu_func(self, context):
