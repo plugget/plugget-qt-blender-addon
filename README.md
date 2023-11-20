@@ -1,6 +1,5 @@
 # plugget qt addon
 A Blender add-on that adds [plugget qt](https://github.com/plugget/plugget-qt) to the menu: `Window/Plugget Qt Manager`  
-The add-on also offers an install button in the add-on preferences, if plugget is not installed.  
 
 
 ![image](https://github.com/plugget/plugget-qt-addon/assets/3758308/0752c140-5b26-452e-81ac-fc4e36ccdb23)<br>
@@ -34,7 +33,8 @@ plugget.install("plugget-qt-addon")
 #### Manual install
 - Download and extract this repo.
 - Add the `plugget_qt_addon` folder (not `plugget-qt-addon` ⚠️) to your add-ons folder#
-- Ensure you have the dependencies installed.
+- Ensure you have the dependencies installed.  
+There's a button in the add-on's preferences to install the `plugget-qt` dependency.
 - Enable the addon, it should now show in your Blender menu `Window/Plugget Qt Manager`
 
 #### local editable install
