@@ -17,7 +17,7 @@ from pathlib import Path
 
 # Define the URL of the repo and the file to be downloaded
 # Download the repo and save it as a zip file
-url = "https://github.com/hannesdelbeke/plugget-qt-addon/archive/refs/heads/main.zip"
+url = "https://github.com/plugget/plugget-qt-addon/archive/refs/heads/main.zip"
 filename = "main.zip"
 urllib.request.urlretrieve(url, filename)
 
@@ -25,6 +25,10 @@ urllib.request.urlretrieve(url, filename)
 local_script_dir = bpy.utils.script_path_user()
 local_addons_dir = Path(local_script_dir) / "addons"
 # TODO, this doesn't install any dependencies !
+
+# delete the plugget_qt_addon folder if it exists
+if os.path.exists(os.path.join(local_addons_dir, "plugget_qt_addon")):
+    shutil.rmtree(os.path.join(local_addons_dir, "plugget_qt_addon"))
 
 # Extract the contents of the zip file to a temporary folder
 with tempfile.TemporaryDirectory() as tmpdir:
@@ -43,5 +47,8 @@ bpy.ops.preferences.addon_enable(module="plugget_qt_addon")
 # Refresh all addons
 bpy.ops.preferences.addon_refresh()
 
-# run operator plugget.install_plugget to install plugget-qt
+#  install plugget-qt
 bpy.ops.plugget.install_plugget()
+
+# show the plugget-qt manager
+bpy.ops.plugget.show_qt_manager()
