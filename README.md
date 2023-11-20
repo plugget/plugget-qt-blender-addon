@@ -12,11 +12,13 @@ If you already have an add-on or script, to manage your menu and tools, you can 
 ![image](https://github.com/plugget/plugget-qt-addon/assets/3758308/0752c140-5b26-452e-81ac-fc4e36ccdb23)<br>
 _Dark ui is auto applied in Blender due to the qt stylesheet_
 
+
 ## Use
 - type in the search box and press enter to search packages on the web
 - click list to see all installed packages
 - select a version in the dropdown, and click install, to install that version
 - click uninstall to uninstall a package
+
 
 ## install
 
@@ -30,11 +32,26 @@ TODO
 - Enable the addon, it should now show in your Blender menu `Window/Plugget Qt Manager`
 
 
+### local editable install
+Great for development.  
+1. Install the add-on without dependencies to addon folder
+- `pip install --target "%appdata%\Blender Foundation\Blender\3.2\scripts\addons" --editable "path/to/repo" --no-dependencies --no-user`
+2. Install the plugget-qt pip dependency to the modules folder
+- `pip install plugget-qt -target "%appdata%\Blender Foundation\Blender\3.2\scripts\modules" --no-user`
+3. start blender, and on every startup you need to add the modules path to site packages.
+```python
+import site, os
+blender_scripts_path = os.path.join(os.path.expanduser("~"), "AppData", "Roaming", "Blender Foundation", "Blender", "3.2", "scripts", "addons")  # Windows OS example
+site.addsitedir(blender_scripts_path)
+```
+
+
 ### requirements
 - [plugget qt](https://github.com/plugget/plugget-qt) ofcourse
   - [plugget](https://github.com/plugget/plugget)
   - [PySide2](https://pypi.org/project/PySide2/)
 - (may i suggest [bqt](https://github.com/techartorg/bqt/))
+
 
 ### support
 - PRs and bugreports are welcome
