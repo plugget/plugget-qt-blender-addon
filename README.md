@@ -20,31 +20,30 @@ _Dark ui is auto applied in Blender due to the qt stylesheet_
 - click uninstall to uninstall a package
 
 
-## Install
+## Installation
 
-### Blender install script (recommended)
+#### Blender install script (recommended)
 - copy the code from the [installer.py](https://github.com/plugget/plugget-qt-addon/blob/main/installer.py)
 - in Blender, go to the scripting tab, click new script, paste the copied code
 - run the script. This installs & enables the addon, and opens the Qt Window at the end.
 
 <details>
-<summary>Other installation methods</summary>
+<summary><h3>Other installation methods</h3></summary>
 
-### Plugget install
+#### Plugget install
 If you already have plugget installed, you can plugget-install this addon by name `plugget-qt-addon`
 ```python
 import plugget
 plugget.install("plugget-qt-addon")
 ```
 
-### Manual install
+#### Manual install
 - Download and extract this repo.
 - Add the `plugget_qt_addon` folder (not `plugget-qt-addon` ⚠️) to your add-ons folder#
 - Ensure you have the dependencies installed.
 - Enable the addon, it should now show in your Blender menu `Window/Plugget Qt Manager`
 
-
-### local editable install
+#### local editable install
 Great for development.  
 1. Install the add-on without dependencies to addon folder
 - `pip install --target "%appdata%\Blender Foundation\Blender\3.2\scripts\addons" --editable "path/to/repo" --no-dependencies --no-user`
@@ -58,6 +57,7 @@ site.addsitedir(blender_scripts_path)
 ```
 
 </details>
+
 
 ### requirements
 - [plugget qt](https://github.com/plugget/plugget-qt) ofcourse
