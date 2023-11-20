@@ -15,9 +15,6 @@ import bpy
 from pathlib import Path
 
 
-# TODO, pip install plugget
-# use plugget to install plugget-qt-addon
-
 # Define the URL of the repo and the file to be downloaded
 # Download the repo and save it as a zip file
 url = "https://github.com/hannesdelbeke/plugget-qt-addon/archive/refs/heads/main.zip"
@@ -45,3 +42,6 @@ bpy.ops.preferences.addon_enable(module="plugget_qt_addon")
 
 # Refresh all addons
 bpy.ops.preferences.addon_refresh()
+
+# run operator plugget.install_plugget to install plugget-qt
+bpy.ops.plugget.install_plugget()
