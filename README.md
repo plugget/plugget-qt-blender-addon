@@ -1,13 +1,7 @@
 # plugget qt addon
-A simple add-on to add a [plugget qt](https://github.com/plugget/plugget-qt) launcher to the Blender menu `Window/Plugget Qt Manager` <br>
-There's no actual code in the add-on. It just runs
-```python
-import plugget_qt
-plugget_qt.show()
-```
+A Blender add-on that adds [plugget qt](https://github.com/plugget/plugget-qt) to the menu: `Window/Plugget Qt Manager`  
+The add-on also offers an install button in the add-on preferences, if plugget is not installed.  
 
-If you already have an add-on or script, to manage your menu and tools, you can skip this add-on and launch the widget with above code.
-(I recommend the menu manager [unimenu](https://github.com/hannesdelbeke/unimenu_addon))
 
 ![image](https://github.com/plugget/plugget-qt-addon/assets/3758308/0752c140-5b26-452e-81ac-fc4e36ccdb23)<br>
 _Dark ui is auto applied in Blender due to the qt stylesheet_
@@ -59,12 +53,23 @@ site.addsitedir(blender_scripts_path)
 </details>
 
 
+
+---
+
 ### requirements
 - [plugget qt](https://github.com/plugget/plugget-qt) ofcourse
   - [plugget](https://github.com/plugget/plugget)
   - [PySide2](https://pypi.org/project/PySide2/)
 - (may i suggest [bqt](https://github.com/techartorg/bqt/))
 
+### custom menu
+The add-on launches plugget_qt like this:
+```python
+import plugget_qt
+plugget_qt.show()
+```
+If you already have an add-on or script, to manage your menu and tools, you can skip this add-on and launch the widget with above code.
+(I recommend the menu manager [unimenu](https://github.com/hannesdelbeke/unimenu_addon))
 
 ### support
 - PRs and bugreports are welcome
