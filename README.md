@@ -16,7 +16,7 @@ _Dark ui is auto applied in Blender due to the qt stylesheet_
 ## Installation
 
 #### Blender install script (recommended)
-- copy the code from the [installer.py](https://github.com/plugget/plugget-qt-addon/blob/main/installer.py)
+- copy the code from the [installer.py](https://github.com/plugget/plugget-qt-addon/blob/main/installer/install_script.py)
 - in Blender, go to the scripting tab, click new script, paste the copied code
 - run the script. This installs & enables the addon, and opens the Qt Window at the end.
 
