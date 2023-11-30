@@ -1,5 +1,5 @@
 # Plugget Qt Blender addon
-A Blender add-on that adds [plugget qt](https://github.com/plugget/plugget-qt) to the menu: `Window/Plugget Qt Manager`, and offers an easy installer for plugget in Blender    
+A Blender add-on that adds [plugget qt](https://github.com/plugget/plugget-qt) to the menu: `Window/Plugget Qt Manager`, and offers an easy installer for [plugget](https://github.com/plugget/plugget) in Blender    
 
 
 ![image](https://github.com/plugget/plugget-qt-addon/assets/3758308/0752c140-5b26-452e-81ac-fc4e36ccdb23)<br>
