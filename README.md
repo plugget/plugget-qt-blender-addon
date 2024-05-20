@@ -25,6 +25,9 @@ import os
 import io
 import shutil
 import tempfile
+import bpy
+from pathlib import Path
+import sys
 
 def download_github_repo(repo_url, extract_to):
     # Construct the URL to the zip file
@@ -53,14 +56,15 @@ def download_github_repo(repo_url, extract_to):
         final_destination_path = os.path.join(extract_to, "plugget")
         if os.path.exists(final_destination_path):
             shutil.rmtree(final_destination_path)  # Remove if exists
+        else:
+            # create parent folder if it doesn't exist
+            Path(final_destination_path).parent.mkdir(parents=True, exist_ok=True)
+            
         shutil.move(plugget_folder_path, extract_to)
         print(f"Moved 'plugget' to {final_destination_path}")
-
-import bpy
-from pathlib import Path
-
-# def download_github_repo(repo_url, extract_to):
-#    ...
+        
+        # add to path, since some apps dont do this by default
+        sys.path.append(extract_to)
 
 default_target_path = str(Path(str(bpy.utils.script_path_user())) / "modules")
 repo_url = "https://github.com/plugget/plugget"
@@ -72,6 +76,8 @@ except ImportError:
 # ===================== install dependencies =================================
 import plugget._utils  
 plugget._utils.install_dependencies(app="blender")
+
+# ===================== install plugget addon =================================
 plugget.install("plugget-qt-addon")
 ```
 
