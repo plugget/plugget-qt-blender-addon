@@ -16,6 +16,66 @@ _Dark ui is auto applied in Blender due to the qt stylesheet_
 ## Installation
 
 #### Blender install script (recommended)
+- open the script editor & run this code
+```python
+# ===================== install plugget =================================
+from pip._vendor import requests
+import zipfile
+import os
+import io
+import shutil
+import tempfile
+
+def download_github_repo(repo_url, extract_to):
+    # Construct the URL to the zip file
+    if repo_url.endswith('/'):
+        repo_url = repo_url[:-1]
+    zip_url = f"{repo_url}/archive/refs/heads/main.zip"
+
+    # Send a request to the URL
+    response = requests.get(zip_url)
+    if response.status_code == 200:
+        print(f"Successfully downloaded {zip_url}")
+    else:
+        print(f"Failed to download {zip_url}")
+        return
+
+    with tempfile.TemporaryDirectory() as temp_dir:
+        # Extract the content of the zip file to the temporary directory
+        with zipfile.ZipFile(io.BytesIO(response.content)) as zip_file:
+            zip_file.extractall(path=temp_dir)
+            print(f"Repository extracted to temporary directory {temp_dir}")
+
+        extracted_folder_name = os.path.join(temp_dir, "plugget-main")
+        plugget_folder_path = os.path.join(extracted_folder_name, "plugget")
+
+        # Move 'plugget' directory to the final destination
+        final_destination_path = os.path.join(extract_to, "plugget")
+        if os.path.exists(final_destination_path):
+            shutil.rmtree(final_destination_path)  # Remove if exists
+        shutil.move(plugget_folder_path, extract_to)
+        print(f"Moved 'plugget' to {final_destination_path}")
+
+import bpy
+from pathlib import Path
+
+# def download_github_repo(repo_url, extract_to):
+#    ...
+
+default_target_path = str(Path(str(bpy.utils.script_path_user())) / "modules")
+repo_url = "https://github.com/plugget/plugget"
+try:
+    import plugget
+except ImportError:
+    download_github_repo(repo_url, default_target_path)
+
+# ===================== install dependencies =================================
+import plugget._utils  
+plugget._utils.install_dependencies(app="blender")
+plugget.install("plugget-qt-addon")
+```
+
+#### Blender install file (recommended)
 - Download [installer-blender-2.93.blend](https://github.com/plugget/plugget-qt-addon/raw/main/installer/installer-blender-2.93.blend)
 - Open this Blend file
 - On startup, blender ask if you want to run the script in the blend file, click `allow`.
