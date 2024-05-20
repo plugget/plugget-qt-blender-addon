@@ -75,9 +75,10 @@ except ImportError:
 
 # ===================== install dependencies =================================
 import plugget._utils  
-plugget._utils.install_dependencies(app="blender")
+plugget._utils.install_plugget_dependencies(app="blender")
 
 # ===================== install plugget addon =================================
+plugget.install("bqt")
 plugget.install("plugget-qt-addon")
 ```
 
